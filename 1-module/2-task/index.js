@@ -11,15 +11,7 @@ function print(text) {
  */
 function isValid(name) {
   // ваш код...
-  if (name == null) { // Проверка на то, что имя пустое
-    return false;
-  } else if (name.indexOf(' ') != -1) { // Проверка на то, что в имени нет пробелов
-    return false;
-  } else if (name.length < 4) { // Проверка на длину имени
-    return false;
-  } else { // Все условия выполнены
-    return true;
-  }
+  return !!name && !name.includes(' ') && name.length >= 4;
 }
 
 
